@@ -13,10 +13,15 @@ contract KaseiCoinCrowdsale is Crowdsale, MintedCrowdsale {// UPDATE THE CONTRAC
     // Provide parameters for all of the features of your crowdsale, such as the `rate`, `wallet` for fundraising, and `token`.
     constructor(
         // YOUR CODE HERE!
-        uint256 rate,
+        uint rate,
         address payable wallet,
         KaseiCoin token
-    ) public Crowdsale(rate, wallet, token) {
+
+    ) 
+
+        Crowdsale(rate, wallet, token)
+        public  {
+
         // constructor can stay empty
     }
 }
@@ -37,7 +42,9 @@ contract KaseiCoinCrowdsaleDeployer {
         string memory name,
         string memory symbol,
         address payable wallet
-    ) public {
+    ) 
+        public
+    {
         // Create a new instance of the KaseiCoin contract.
         // YOUR CODE HERE!
         KaseiCoin token = new KaseiCoin(name, symbol, 0);
@@ -48,13 +55,12 @@ contract KaseiCoinCrowdsaleDeployer {
 
         // Create a new instance of the `KaseiCoinCrowdsale` contract
         // YOUR CODE HERE!
-        KaseiCoinCrowdsale Kasei_crowdsale =
-            new KaseiCoinCrowdsale(1, wallet, token);
+        KaseiCoinCrowdsale Kasei_crowdsale = new KaseiCoinCrowdsale(1, wallet, token);
         
             
         // Aassign the `KaseiCoinCrowdsale` contract’s address to the `kasei_crowdsale_address` variable.
         // YOUR CODE HERE!
-        kasei_token_address = address(Kasei_crowdsale);
+        kasei_crowdsale_address = address(Kasei_crowdsale);
 
         // Set the `KaseiCoinCrowdsale` contract as a minter
         // YOUR CODE HERE!
