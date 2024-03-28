@@ -35,7 +35,7 @@
 
 ![deployment_step_eight](PNG_files/deployment_step_eight.PNG)
 
-### ### Navigate to the crowdsale contract and the bottom and select ‘weiRaised’ to view the total wei raised.
+### Navigate to the crowdsale contract and the bottom and select ‘weiRaised’ to view the total wei raised.
 
 ![deployment_step_nine](PNG_files/deployment_step_nine.PNG)
 
